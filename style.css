@@ -36,6 +36,9 @@ header {
     margin: auto;
     padding: 20px;
 }
+.justified-text {
+    text-align: justify;
+}
 
 /* CARD STYLE */
 .card {
