@@ -1,23 +1,66 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
 }
 
+/* NAVBAR */
+nav {
+    background-color: #0a66c2;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
 header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #0a66c2, #004182);
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* CARD STYLE */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
     background: #0a66c2;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
     text-align: center;
-    padding: 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    border-radius: 8px;
-}
-
-.project {
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-top: 30px;
 }
