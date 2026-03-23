@@ -4,9 +4,11 @@
     <title>Saba Zafar | Data Analyst</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <nav>
+    <button onclick="toggleDarkMode()">🌙</button>
     <a href="index.html">Home</a>
     <a href="About.html">About</a>
     <a href="Projects.html">Projects</a>
@@ -24,10 +26,11 @@
 
     <div class="card">
         <h2>Welcome</h2>
-        <p>
-            I am a data analyst focused on turning raw data into meaningful insights 
-            to support business decision-making.
-        </p>
+      <p>
+Data Analyst with a strong foundation in Computer Science and over six years of professional experience.
+Specialized in data analysis, visualization, and transforming data into actionable business insights.
+</p>
+
     </div>
 
     <div class="card">
@@ -40,6 +43,11 @@
 <footer>
     <p>© 2026 Saba Zafar</p>
 </footer>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
