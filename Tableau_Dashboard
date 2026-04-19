@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau Inventory Dashboard (Executive Level)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Projects.html">Projects</a>
+</nav>
+
+<header>
+    <h1>📊  Tableau Inventory Dashboard Analysis</h1>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Project Overview</h2>
+        <p class="justify">
+Designed an interactive Tableau Executive Inventory Dashboard to analyze supply chain performance across warehouses and suppliers. The dashboard presents key KPIs such as total units sold, inventory value, stockout rate, and inventory turnover, along with monthly inventory flow trends and product-level risk analysis.
+        
+</p>
+    </div>
+
+    <div class="card">
+        <h2>Tools Used</h2>
+        <ul>
+<li> Excel </li>
+<li> Tableau </li>
+</ul>
+    </div>
+
+    <div class="card">
+        <h2>Key Insights</h2>
+        <ul>
+            <li>Certain warehouses show high sales but also higher stockout rates, indicating imbalance in stock distribution</li>
+            <li>Supplier lead time variability significantly impacts inventory availability</li>
+            <li>High-demand products are more prone to stockouts</li>
+             <li>Inventory inflow and outflow imbalance observed in specific periods</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Business Recommendation</h2>
+        <ul>
+            <li>Improve supplier performance by prioritizing vendors with lower lead times and consistent delivery</li> 
+            <li>Maintain safety stock levels for high-demand and fast-moving products to reduce stockout risk</li>
+            <li>Optimize inventory distribution across warehouses to balance demand and supply efficiently</li>
+            <li>Monitor inventory flow trends regularly to align restocking with sales patterns</li>
+<li>Implement demand forecasting techniques to better plan future inventory needs</li>
+<li>Reduce dependency on slow suppliers by diversifying sourcing options</li>
+      </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Saba Zafar</p>
+</footer>
+
+</body>
+</html>
