@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Saba Zafar</title>
+    <meta name="description" content="Data analysis projects by Saba Zafar: Excel and Tableau dashboards for inventory and sales analysis.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script src="script.js"></script>
 
 <nav>
     <a href="index.html">Home</a>
     <a href="About.html">About</a>
-    <a href="Projects.html">Projects</a>
+    <a href="Research.html">Research &amp; Publications</a>
+    <a href="Projects.html" class="active">Projects</a>
     <a href="Contact.html">Contact</a>
+    <a href="cv.pdf" class="btn" download>Download CV</a>
+    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
 </nav>
 
 <header>
@@ -19,50 +26,45 @@
 
 <div class="container">
 
-     <div class="card">
-        <h2>Inventory Analysis Dashboard</h2>
-        <p>Created an interactive Inventory dashboard using Microsoft Excel.</p>
+    <div class="card">
+        <h2>Excel Inventory Analysis Dashboard</h2>
+        <p>An interactive inventory dashboard built in Microsoft Excel.</p>
         <a href="Inventory_dashboard.html" class="btn">View Project</a>
-        <a href="https://github.com/sabazafar209-wq/Inventory_Data_Analysis" class="btn"> View on GitHub </a>
-            <h2>Dashboard Preview</h2>
-    <img src="images/inventory_image.png" width="100%">
+        <a href="https://github.com/sabazafar209-wq/Inventory_Data_Analysis" class="btn outline">View on GitHub</a>
+        <h3>Dashboard Preview</h3>
+        <img src="images/inventory_image.png" alt="Excel inventory analysis dashboard">
     </div>
+
     <div class="card">
-        <h2>Sales Analysis Dashboard</h2>
-        <p>Created an interactive dashboard using Microsoft Excel.</p>
+        <h2>Excel Sales Analysis Dashboard</h2>
+        <p>An interactive sales dashboard built in Microsoft Excel.</p>
         <a href="sales-dashboard.html" class="btn">View Project</a>
-        <a href="https://github.com/sabazafar209-wq/excel-sales-dashboard" class="btn"> View on GitHub </a>
-            <h2>Dashboard Preview</h2>
-    <img src="images/sales_dashboard.png" width="100%">
-    </div>
-
-
- 
-
-    <div class="card">
-        <h2>Tableau Inventory Dashboard (Executive Level)</h2>
-        <p>Designed an interactive Tableau dashboard to analyze inventory performance, warehouse efficiency, and supplier lead times. The dashboard provides executive-level insights into stock flow, stockout risks, and operational bottlenecks using KPI-driven visualization and dynamic filtering..</p>
-        <a href="Tableau_Dashboard.html" class="btn">View Project</a>
-           <a href="https://github.com/sabazafar209-wq/inventory-tableau-dashboard" class="btn"> View on GitHub </a>
-                   <h2>Dashboard Preview</h2>
-    <img src="images/Dashboard.png" width="100%">
-
+        <a href="https://github.com/sabazafar209-wq/excel-sales-dashboard" class="btn outline">View on GitHub</a>
+        <h3>Dashboard Preview</h3>
+        <img src="images/sales_dashboard.png" alt="Excel sales analysis dashboard">
     </div>
 
     <div class="card">
         <h2>Tableau Inventory Dashboard (Executive Level)</h2>
-        <p>Designed an interactive Tableau dashboard to analyze inventory performance, warehouse efficiency, and supplier lead times. The dashboard provides executive-level insights into stock flow, stockout risks, and operational bottlenecks using KPI-driven visualization and dynamic filtering..</p>
+        <p class="justified-text">An interactive Tableau dashboard analyzing inventory performance, warehouse efficiency and supplier lead times. It gives executive-level insight into stock flow, stockout risks and operational bottlenecks through KPI-driven visualization and dynamic filtering.</p>
         <a href="Tableau_Dashboard.html" class="btn">View Project</a>
-           <a href="https://github.com/sabazafar209-wq/inventory-tableau-dashboard" class="btn"> View on GitHub </a>
-                   <h2>Dashboard Preview</h2>
-    <img src="images/Dashboard.png" width="100%">
+        <a href="https://github.com/sabazafar209-wq/inventory-tableau-dashboard" class="btn outline">View on GitHub</a>
+        <h3>Dashboard Preview</h3>
+        <img src="images/Dashboard.png" alt="Tableau executive inventory dashboard">
+    </div>
 
+    <div class="card">
+        <h2>Learner Engagement &amp; Cognitive Load Model (Research)</h2>
+        <p class="justified-text">Random forest and LSTM models trained on clickstream data from the Open University Learning Analytics Dataset (OULAD) to estimate learners' engagement and cognitive load, with SHAP explanations showing which behaviors drive each prediction. Results, including corrections and non-replicating findings, are reported openly.</p>
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">SHAP</span><span class="tag">Machine learning</span>
+        <p><a href="https://doi.org/10.35542/osf.io/bgnkw_v1" class="btn" target="_blank" rel="noopener">Read the Preprint</a>
+        <a href="Research.html" class="btn outline">All Research</a></p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 Saba Zafar</p>
+    <p>© 2026 Saba Zafar · <a href="https://orcid.org/0009-0002-3922-176X">ORCID</a> · <a href="https://github.com/sabazafar209-wq">GitHub</a></p>
 </footer>
 
 </body>

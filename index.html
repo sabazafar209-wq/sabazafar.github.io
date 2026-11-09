@@ -1,71 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Saba Zafar | Data Analyst</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saba Zafar | Data Analyst &amp; Learning Analytics Researcher</title>
+    <meta name="description" content="Portfolio of Saba Zafar: data analyst and learning analytics researcher working with Excel, SQL, Python, Tableau and Power BI.">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<script src="script.js"></script>
 
 <nav>
-    <button onclick="toggleDarkMode()">🌙</button>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="About.html">About</a>
+    <a href="Research.html">Research &amp; Publications</a>
     <a href="Projects.html">Projects</a>
     <a href="Contact.html">Contact</a>
     <a href="cv.pdf" class="btn" download>Download CV</a>
-
+    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
 </nav>
 
 <header>
     <h1>Saba Zafar</h1>
-    <p>Data Analyst | Excel | SQL | Python | Tableau</p>
+    <p>Data Analyst · Learning Analytics Researcher</p>
+    <p>Excel · SQL · Python · Tableau · Power BI</p>
 </header>
 
 <div class="container">
 
     <div class="card">
         <h2>Welcome</h2>
-      <p class="justified-text">
-Welcome to my portfolio. I am a Data Analyst with a strong foundation in Computer Science and a passion for transforming data into meaningful insights. I specialize in analyzing datasets, building interactive dashboards, and presenting clear, data-driven solutions that support effective decision-making.
-
-With experience in tools such as Excel, SQL, Tableau, and Power BI, I focus on delivering accurate analysis and visually compelling reports. My work reflects a structured and detail-oriented approach, aligned with professional standards expected in modern, data-driven organizations.
-
-I invite you to explore my projects, where I demonstrate practical skills in data cleaning, visualization, and business analysis. I am currently seeking opportunities in Germany where I can contribute to a dynamic team and grow as a Data Analyst.
-</p>
-
+        <p class="justified-text">Welcome to my portfolio. I am a Data Analyst with a strong foundation in Computer Science and a passion for transforming data into meaningful insights. I analyze datasets, build interactive dashboards and present clear, data-driven findings that support effective decision-making.</p>
+        <p class="justified-text">Alongside my dashboard work, I research learning analytics and explainable AI in education. I have published two open-access preprints on modeling learner engagement and on explainable analytics for teachers.</p>
+        <p class="justified-text">I invite you to explore my projects and research, where I demonstrate practical skills in data cleaning, visualization, machine learning and analysis.</p>
+        <a href="Projects.html" class="btn">View Projects</a>
+        <a href="Research.html" class="btn outline">Research &amp; Publications</a>
     </div>
 
     <div class="card">
         <h2>Key Skills</h2>
-        <p>Excel | SQL | Python | Power BI | Tableau</p>
-        <p class="justified-text"><h2>Excel</h2>
-        Advanced use of Microsoft Excel for data cleaning, transformation, and analysis. Skilled in Pivot Tables, Power Query, formulas, and dashboard creation to generate accurate reports and track key performance indicators (KPIs).
-        </p>
-        <p class="justified-text"><h2>SQL</h2>
-        Proficient in writing SQL queries to extract, filter, and manipulate data from relational databases. Experienced in joins, aggregations, and data validation to support efficient data analysis and reporting.
-        </p>
-        <p class="justified-text"><h2>Python</h2>
-            Basic to intermediate knowledge of Python for data analysis using libraries such as Pandas and NumPy. Used for data cleaning, automation, and exploratory data analysis to handle structured datasets effectively.
-        </p>
-        <p class="justified-text"><h2>Power BI</h2>
-        Experienced in developing interactive dashboards and reports using Power BI. Skilled in data modeling, DAX functions, and visualization techniques to present insights in a clear and business-friendly format.
-        </p>
-        <p class="justified-text"><h2>Tableau</h2>
-        Proficient in creating dynamic and visually appealing dashboards in Tableau. Able to transform complex datasets into intuitive visual stories that support decision-making and highlight key trends.
-        </p>
+        <h3>Excel</h3>
+        <p class="justified-text">Advanced use of Microsoft Excel for data cleaning, transformation and analysis. Skilled in Pivot Tables, Power Query, formulas and dashboard creation to generate accurate reports and track key performance indicators (KPIs).</p>
+        <h3>SQL</h3>
+        <p class="justified-text">Writing SQL queries to extract, filter and manipulate data from relational databases, including joins, aggregations and data validation for efficient analysis and reporting.</p>
+        <h3>Python</h3>
+        <p class="justified-text">Python for data analysis and machine learning with Pandas, NumPy, scikit-learn and PyTorch, used for data cleaning, automation, exploratory analysis and predictive modeling.</p>
+        <h3>Power BI</h3>
+        <p class="justified-text">Developing interactive dashboards and reports in Power BI, with data modeling, DAX functions and visualization techniques that present insights in a clear, business-friendly format.</p>
+        <h3>Tableau</h3>
+        <p class="justified-text">Creating dynamic, visually clear dashboards in Tableau that turn complex datasets into intuitive visual stories and highlight key trends.</p>
     </div>
 
 </div>
 
 <footer>
-    <p>© 2026 Saba Zafar</p>
+    <p>© 2026 Saba Zafar · <a href="https://orcid.org/0009-0002-3922-176X">ORCID</a> · <a href="https://github.com/sabazafar209-wq">GitHub</a></p>
 </footer>
-<script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
 
 </body>
 </html>
