@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cognitive Load &amp; Engagement Model | Saba Zafar</title>
+    <meta name="description" content="Case study: estimating cognitive load and engagement from OULAD learning data with random forests, LSTMs and SHAP, including a leakage audit and multi-seed statistics.">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+<script src="script.js?v=5"></script>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Research.html">Research &amp; Publications</a>
+    <a href="Projects.html" class="active">Projects</a>
+    <a href="Contact.html">Contact</a>
+    <a href="cv.pdf" class="btn" download>Download CV</a>
+    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<header>
+    <h1>Estimating Cognitive Load &amp; Engagement from Learning Data</h1>
+    <p>Machine learning · Sequence models · Explainable AI · Open Learning Analytics Dataset (OULAD)</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Overview</h2>
+        <p class="justified-text">Can clicks and submissions in a learning platform reveal when students are struggling, without eye-tracking, EEG or webcams? I built a log-based pipeline on the Open University Learning Analytics Dataset, then stress-tested my own results twice. The corrected answer is a more modest yes than I first found, and the way I found that out is the main contribution of the project.</p>
+        <div class="stats">
+            <div class="stat"><span class="num">10.66M</span><span class="lbl">clickstream rows analyzed</span></div>
+            <div class="stat"><span class="num">25,793</span><span class="lbl">weekly learner sequences</span></div>
+            <div class="stat"><span class="num">25</span><span class="lbl">LSTM training runs across 5 seeds</span></div>
+            <div class="stat"><span class="num">0.483</span><span class="lbl">honest macro F1 after leakage audit</span></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Pipeline</h2>
+        <div class="pipeline">
+            <div class="step"><strong>1. Raw data</strong>OULAD: 32,593 students, 22 module presentations, assessments and 10.66M VLE clicks</div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>2. Features</strong>Idle gaps between sessions, burstiness, pre-deadline cramming, lateness, scores</div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>3. Proxy labels</strong>K-means (k=3) tiers, checked against final course results</div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>4. Models</strong>Random forest baseline and LSTM on weekly click sequences (PyTorch)</div>
+            <span class="arrow">→</span>
+            <div class="step"><strong>5. Explain &amp; audit</strong>SHAP explanations, feature-disjoint test, 5-seed statistics</div>
+        </div>
+        <p class="justified-text">OULAD has no direct measure of cognitive load, so the labels are clusters of struggle-related behavior. They track course outcomes (72% of the low-load group passed, versus 39% of the high-load group), but they are best read as an <em>assessment-defined struggle proxy</em>, not cognitive load in the full psychological sense.</p>
+    </div>
+
+    <div class="card">
+        <h2>Key Finding: Auditing My Own Result</h2>
+        <figure class="medium">
+            <img src="images/oulad/leakage_audit.png" alt="Bar chart: LSTM macro F1 falls from 0.650 first reported to 0.536 entangled and 0.483 under a strict feature-disjoint test">
+            <figcaption>LSTM macro F1 under three evaluation setups. Error bars show the standard deviation across 5 seeds.</figcaption>
+        </figure>
+        <p class="justified-text">My first LSTM looked promising, but its labels and inputs were built from related data, so the model could partly reconstruct its own labels. I rebuilt the test so that labels came only from assessment data and the model saw only clickstream data. Performance dropped from 0.536 to 0.483 macro F1, and the drop was consistent in every seed (Mann-Whitney U, p = 0.004). A real signal remains, but it is smaller than the first numbers suggested.</p>
+        <div class="callout">The 0.98 accuracy of the random forest baseline is not reported as a result. It predicts labels made from its own features, so it mainly confirms that the clusters are consistent.</div>
+    </div>
+
+    <div class="card">
+        <h2>Explainability: What Drives a "High Load" Prediction?</h2>
+        <figure class="narrow">
+            <img src="images/oulad/shap_summary_high_load_v2.png" alt="SHAP summary plot: idle-gap features have the largest impact on predicting high cognitive load">
+            <figcaption>SHAP summary for the high-load class (random forest, clickstream features). Each dot is one student; red means a high feature value; dots to the right push toward "high load".</figcaption>
+        </figure>
+        <p class="justified-text">Irregular and long gaps between study sessions (idle_gap_std, idle_gap_max, idle_gap_mean) are the strongest signals of struggle. Students with more active days and more clicks are pushed toward lower load. For a teacher, this turns an opaque score into a concrete prompt: <em>this student's study rhythm has become irregular, so it may be time to check in.</em></p>
+    </div>
+
+    <div class="card">
+        <h2>Robustness: Re-Testing a Claimed Improvement</h2>
+        <figure>
+            <img src="images/oulad/multiseed_boxplots.png" alt="Box plots of LSTM macro F1 and high-load F1 across 5 seeds for five training configurations">
+            <figcaption>Five configurations, 5 random seeds each. Diamonds mark the mean; dots are individual runs.</figcaption>
+        </figure>
+        <ul>
+            <li><strong>Oversampling did not replicate.</strong> A single split suggested it improved macro F1 (0.545 to 0.559). Across 5 seeds it did not (0.536 vs. 0.539, Wilcoxon p = 0.625), so I retracted that claim.</li>
+            <li><strong>Focal loss consistently hurt.</strong> It underperformed the baseline in all 5 seeds (0.429 vs. 0.536, p = 0.0625, the lowest possible at n = 5).</li>
+            <li><strong>Practical limit:</strong> high-load precision never exceeded 0.29, so roughly 3 in 4 "high load" flags are false alarms. A flag should prompt a check-in, not a diagnosis.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Skills Demonstrated</h2>
+        <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">PyTorch (LSTM)</span><span class="tag">scikit-learn</span><span class="tag">SHAP</span><span class="tag">K-means clustering</span><span class="tag">Class-imbalance methods</span><span class="tag">Mann-Whitney U</span><span class="tag">Wilcoxon signed-rank</span><span class="tag">Bootstrap CIs</span><span class="tag">Large-scale data (10M+ rows)</span><span class="tag">Transparent reporting</span>
+        <p style="margin-top:12px">
+            <a href="https://doi.org/10.35542/osf.io/bgnkw_v1" class="btn" target="_blank" rel="noopener">Read the Preprint</a>
+            <a href="Research.html" class="btn outline">All Research</a>
+            <a href="Projects.html" class="btn outline">← Back to Projects</a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Saba Zafar · <a href="https://orcid.org/0009-0002-3922-176X">ORCID</a> · <a href="https://github.com/sabazafar209-wq">GitHub</a></p>
+</footer>
+
+</body>
+</html>
