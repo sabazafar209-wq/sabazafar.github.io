@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explainable, Age-Aware Learning Analytics for Teachers | Saba Zafar</title>
+    <meta name="description" content="Research brief: a synthesis of explainable AI, teacher technology adoption and trait-aware learning analytics, identifying an open gap for explainable, age-aware systems for teachers.">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+<script src="script.js?v=5"></script>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="Research.html" class="active">Research &amp; Publications</a>
+    <a href="Projects.html">Projects</a>
+    <a href="Contact.html">Contact</a>
+    <a href="cv.pdf" class="btn" download>Download CV</a>
+    <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<header>
+    <h1>Explainable, Age-Aware Learning Analytics for Teachers</h1>
+    <p>Research brief · Literature synthesis and position paper (2026)</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Overview</h2>
+        <p class="justified-text">Explainable AI in education almost always predicts and explains outcomes about <em>students</em>. This paper asks what happens when the teacher is the one being supported: could a system predict a teacher's own development, such as digital-skill growth, explain that prediction back to the teacher, and account for the teacher's age? I synthesized peer-reviewed work from 2021 to 2026 across three research threads to find out what already exists and where the gap lies.</p>
+        <div class="stats">
+            <div class="stat"><span class="num">3</span><span class="lbl">research threads synthesized</span></div>
+            <div class="stat"><span class="num">~25</span><span class="lbl">directly relevant sources</span></div>
+            <div class="stat"><span class="num">2021–26</span><span class="lbl">publication window</span></div>
+            <div class="stat"><span class="num">1</span><span class="lbl">specific open gap identified</span></div>
+        </div>
+        <p style="margin-top:14px"><a href="papers/Zafar_2026_Explainable_AgeAware_LA_Position_Paper.pdf" class="btn" download>Download PDF</a>
+        <a href="https://doi.org/10.35542/osf.io/25m96_v1" class="btn outline" target="_blank" rel="noopener">View on OSF</a></p>
+    </div>
+
+    <div class="card">
+        <h2>Where the Gap Sits</h2>
+        <svg viewBox="0 0 640 430" role="img" aria-label="Three research threads overlapping; the open gap sits where teacher-facing explainable AI, age research and trait-aware modeling meet" style="width:100%;max-width:600px;display:block;margin:6px auto">
+  <circle cx="225" cy="155" r="130" fill="#0a66c2" fill-opacity="0.15" stroke="#0a66c2" stroke-width="2"/>
+  <circle cx="415" cy="155" r="130" fill="#2e9e6b" fill-opacity="0.15" stroke="#2e9e6b" stroke-width="2"/>
+  <circle cx="320" cy="295" r="130" fill="#d9822b" fill-opacity="0.15" stroke="#d9822b" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="currentColor" text-anchor="middle">
+    <text x="175" y="95" font-size="15" font-weight="bold">Teacher-facing XAI</text>
+    <text x="175" y="115" font-size="12">teachers validate</text>
+    <text x="175" y="131" font-size="12">explanations</text>
+    <text x="175" y="147" font-size="12">about students</text>
+    <text x="465" y="95" font-size="15" font-weight="bold">Age in adoption</text>
+    <text x="465" y="115" font-size="12">measured as</text>
+    <text x="465" y="131" font-size="12">a covariate,</text>
+    <text x="465" y="147" font-size="12">never modeled</text>
+    <text x="320" y="352" font-size="15" font-weight="bold">Trait-aware modeling</text>
+    <text x="320" y="372" font-size="12">personality as a</text>
+    <text x="320" y="388" font-size="12">model moderator</text>
+    <text x="320" y="208" font-size="13" font-weight="bold" fill="#c0392b">Open</text>
+    <text x="320" y="224" font-size="13" font-weight="bold" fill="#c0392b">gap</text>
+  </g>
+</svg>
+        <p class="justified-text"><strong>The open gap: teacher as subject, age as parameter.</strong> Each thread is active on its own. What no study combines is a system that makes a prediction about a teacher's own practice, explains it to that teacher, and uses age as a parameter inside the model rather than a label reported beside it.</p>
+    </div>
+
+    <div class="card">
+        <h2>Key Findings</h2>
+        <ol>
+            <li><strong>Teacher AI adoption is a mature field.</strong> It is studied extensively with established technology-acceptance frameworks, so adoption alone is not an open question.</li>
+            <li><strong>Explainable AI targets students.</strong> SHAP dominates educational data mining and is used mainly to explain student performance, engagement and dropout. Even there, non-technical users find some explanation formats hard to read.</li>
+            <li><strong>Teachers act as validators, not subjects.</strong> Where teachers use XAI tools, they judge explanations about students. No reviewed system explains a prediction about the teacher's own development.</li>
+            <li><strong>Age is measured, not modeled.</strong> Age effects on adoption are real but small and point in different directions by outcome. Yet no study builds age into a predictive or adaptive model.</li>
+        </ol>
+        <div class="callout">A precedent exists: recent <em>trait-aware learning analytics</em> work embeds personality as a moderator inside the model. This paper argues the same step can be taken for age, in a teacher-facing setting.</div>
+    </div>
+
+    <div class="card">
+        <h2>Approach and Limits</h2>
+        <p class="justified-text">This is an informal, focused synthesis, not a formal systematic review. Sources were found through keyword searches on Google Scholar and the web, plus forward and backward citation chaining from central papers. There was no pre-registered protocol, dual screening or PRISMA quality scoring, so the paper is scoped for depth on one intersection rather than exhaustive coverage.</p>
+        <p class="justified-text">The gap it identifies motivates my planned doctoral research, and connects to my <a href="OULAD_Project.html">cognitive load and engagement project</a>, which explains learner-data predictions with SHAP.</p>
+    </div>
+
+    <div class="card">
+        <h2>Skills Demonstrated</h2>
+        <span class="tag">Literature synthesis</span><span class="tag">Gap analysis</span><span class="tag">Explainable AI</span><span class="tag">Technology acceptance (TAM, UTAUT)</span><span class="tag">Trait-aware learning analytics</span><span class="tag">Academic writing</span><span class="tag">Transparent scoping</span>
+        <p style="margin-top:12px">
+            <a href="papers/Zafar_2026_Explainable_AgeAware_LA_Position_Paper.pdf" class="btn" download>Download PDF</a>
+            <a href="https://doi.org/10.35542/osf.io/25m96_v1" class="btn outline" target="_blank" rel="noopener">View on OSF</a>
+            <a href="Research.html" class="btn outline">← Back to Research</a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Saba Zafar · <a href="https://orcid.org/0009-0002-3922-176X">ORCID</a> · <a href="https://github.com/sabazafar209-wq">GitHub</a></p>
+</footer>
+
+</body>
+</html>
