@@ -56,6 +56,19 @@ header {
 }
 
 header h1 { margin: 0 0 8px; }
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    margin-bottom: 14px;
+}
+
+.profile-photo.small { width: 120px; height: 120px; }
 header p { margin: 0; opacity: 0.95; }
 
 /* CONTAINER */
