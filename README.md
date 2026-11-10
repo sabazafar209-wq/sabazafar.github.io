@@ -1,134 +1,39 @@
-# 📊 Sales Performance Dashboard (Excel)
+# Saba Zafar · Portfolio Website
 
-## 📌 Project Overview
+Source for my personal portfolio: **https://sabazafar209-wq.github.io/sabazafar.github.io/**
 
-This project presents an interactive **Sales Performance Dashboard** built in Microsoft Excel to analyze and visualize key business metrics. The objective is to provide actionable insights into sales trends, regional performance, product categories, and salesperson efficiency.
+I am a data analyst and learning analytics researcher. The site presents my research on explainable AI in education alongside my data-analysis projects.
 
----
+## Pages
 
-## 🎯 Business Problem
+| Page | Contents |
+|---|---|
+| [Home](https://sabazafar209-wq.github.io/sabazafar.github.io/) | Introduction, research skills and data-analytics tools |
+| [About](https://sabazafar209-wq.github.io/sabazafar.github.io/About.html) | Background, education and what I am looking for |
+| [Research & Publications](https://sabazafar209-wq.github.io/sabazafar.github.io/Research.html) | Two 2026 preprints with downloadable PDFs |
+| [Projects](https://sabazafar209-wq.github.io/sabazafar.github.io/Projects.html) | Research and dashboard projects |
+| [Contact](https://sabazafar209-wq.github.io/sabazafar.github.io/Contact.html) | Email, GitHub and ORCID |
 
-A retail company wants to:
+## Featured work
 
-* Track overall sales and profitability
-* Identify high-performing regions and categories
-* Monitor monthly sales trends
-* Evaluate salesperson performance
+- **[Cognitive load & engagement estimation (OULAD)](https://sabazafar209-wq.github.io/sabazafar.github.io/OULAD_Project.html)**: random forest, LSTM and SHAP on 10.66M learning-platform events, with a feature-leakage audit and multi-seed statistics. Code: [oulad-cognitive-load-engagement](https://github.com/sabazafar209-wq/oulad-cognitive-load-engagement)
+- **[Explainable, age-aware learning analytics for teachers](https://sabazafar209-wq.github.io/sabazafar.github.io/XAI_Teacher_Brief.html)**: a literature synthesis and position paper
+- Dashboards in [Excel (inventory)](https://github.com/sabazafar209-wq/Inventory_Data_Analysis), [Excel (sales)](https://github.com/sabazafar209-wq/excel-sales-dashboard) and [Tableau](https://github.com/sabazafar209-wq/inventory-tableau-dashboard)
 
-This dashboard helps management make **data-driven decisions** by transforming raw data into meaningful insights.
+## How the site is built
 
----
-
-## 🛠️ Tools & Skills Used
-
-* Microsoft Excel
-* Data Cleaning & Preparation
-* Pivot Tables & Pivot Charts
-* Data Visualization
-* KPI Development
-* Dashboard Design
-* Business Analysis
-
----
-
-## 📂 Dataset
-
-* ~2000 rows of sales data
-* Includes:
-
-  * Order Date
-  * Region
-  * Category & Sub-category
-  * Salesperson
-  * Sales, Quantity, Profit
-
----
-
-## 🧹 Data Cleaning & Preparation
-
-* Handled missing values and ensured data consistency
-* Formatted date and currency fields
-* Removed duplicate records
-* Converted dataset into structured Excel table
-* Created calculated columns:
-
-  * Month
-  * Year
-  * Profit Margin
-
----
-
-## 📊 Dashboard Features
-
-### 🔹 Key Performance Indicators (KPIs)
-
-* Total Sales
-* Total Profit
-* Profit Margin
-
-### 🔹 Visualizations
-
-* Sales by Region (Bar Chart)
-* Profit by Category (Pie Chart)
-* Monthly Sales Trend (Line Chart)
-* Salesperson Performance (Bar Chart)
-
-### 🔹 Interactivity
-
-* Slicers for:
-
-  * Region
-  * Category
-  * Salesperson
-
----
-
-## 📈 Key Insights
-
-* North region is the top-performing region in terms of total sales
-* Technology category generates the highest share of total profit
-* Sales trends show fluctuations with peak performance in mid-year
-* Seasonal variations are observed in lower-performing months
-* Sales performance varies across salespersons, indicating opportunities for improvement
-
----
-
-## 🖼️ Dashboard Preview
-
-![Dashboard Screenshot](screenshots/dashboard.png)
-
----
-
-## 📁 Project Structure
+Plain HTML and CSS with a small script for dark mode, published with GitHub Pages from the `main` branch. No build step.
 
 ```
-Excel-Sales-Dashboard/
-│── dataset.xlsx
-│── dashboard.xlsx
-│── screenshots/
-│     └── dashboard.png
-│── README.md
+index.html, About.html, Research.html, Projects.html, Contact.html   main pages
+OULAD_Project.html, XAI_Teacher_Brief.html                           research case studies
+Inventory_dashboard.html, sales-dashboard.html, Tableau_Dashboard.html   dashboard pages
+style.css, script.js                                                  shared styles and dark mode
+images/, papers/, cv.pdf                                              figures, preprint PDFs and CV
 ```
 
----
+## Contact
 
-## 🚀 Conclusion
+Saba Zafar · sabazafar209@gmail.com · [ORCID 0009-0002-3922-176X](https://orcid.org/0009-0002-3922-176X)
 
-This project demonstrates the ability to:
-
-* Clean and transform raw data
-* Build interactive dashboards
-* Generate business insights
-* Present data in a clear and professional manner
-
----
-
-## 📬 Contact
-
-If you would like to connect or discuss opportunities:
-
-* Whatsapp: +81-90-8583-9595
-* Email: sabazafar209@gmail.com
-* Github: Sabazafar.github.io
-
----
+The text, CV, photo and papers on this site are © 2026 Saba Zafar. Please ask before reusing them.
